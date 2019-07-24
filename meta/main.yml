@@ -21,9 +21,9 @@ galaxy_info:
         - 7
 
   galaxy_tags:
-    - python_package_management
+    - pythonpackagemanagement
     - pip
-    - python_library
+    - pythonlibrary
     - programming
     - os
 
