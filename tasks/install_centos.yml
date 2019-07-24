@@ -1,0 +1,13 @@
+---
+# tasks file for pip - CentOS
+
+- name: Installing {{ pip_app_package }} on CentOS systems
+  package:
+    name: "{{ pip_app_package }}"
+    state: "{{ pip_desired_state }}"
+
+- name: Upgrade pip version for {{ pip_app }} on CentOS systems
+  pip:
+    executable: "{{ 'pip3' if pip_app_package.startswith('python3') else 'pip2' }}"
+    name: "{{ pip_app_package.split('-')[1] }}"
+    state: "{{ pip_upgrade_version }}"

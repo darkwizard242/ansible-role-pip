@@ -1,0 +1,30 @@
+galaxy_info:
+  role_name: pip
+  author: Ali Muhammad
+  description: Role for dynamically installing or uninstalling 'python3-pip' or 'python-pip' package.
+  company: none
+  license: MIT
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+        - buster
+    - name: EL
+      versions:
+        - 7
+
+  galaxy_tags:
+    - python_package_management
+    - pip
+    - python_library
+    - programming
+    - os
+
+dependencies: []

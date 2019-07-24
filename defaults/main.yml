@@ -1,0 +1,5 @@
+---
+# defaults file for pip
+pip_app_package: python3-pip
+pip_desired_state: present
+pip_upgrade_version: latest
