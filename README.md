@@ -1,17 +1,18 @@
-Ansible Role: pip
-=========
+![Ansible Role](https://img.shields.io/ansible/role/42282?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/42282?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/42282?label=ansible%20quality%20score) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-pip?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-pip?color=orange&style=flat-square)
 
-Role to install (_by default_) `python3-pip` package  or `python-pip` package (_if  passed as var_)  on **Debian/Ubuntu** and **EL** systems.
+# Ansible Role: pip
 
-Requirements
-------------
+Role to install (_by default_) [python3-pip package or python-pip package](https://pip.pypa.io/en/stable/) (_if passed as var_) on **Debian/Ubuntu** and **EL** systems.
+
+## Requirements
 
 None.
 
-Role Variables
---------------
+## Role Variables
 
-Available variables are listed below (located in  `defaults/main.yml`):
+Available variables are listed below (located in `defaults/main.yml`)
+
+### Variables list:
 
 ```yaml
 pip_app_package: python3-pip
@@ -19,53 +20,52 @@ pip_desired_state: present
 pip_upgrade_version: latest
 ```
 
+### Variables table:
 
+Variable            | Value (default) | Description
+------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------
+pip_app_package     | **python3-pip** | Defined to dynamically provide package name i.e. **python3-pip** or **python-pip**
+pip_desired_state   | present         | Defined to dynamically select whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package.
+pip_upgrade_version | latest          | Defined to dynamically select whether to upgrade pip after installation or not.
 
-Variable `pip_app_package`: Defines the app to install i.e. **python3-pip** or **python-pip**
-
-Variable `pip_desired_state`: Defined to dynamically chose whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package.
-
-Variable `pip_upgrade_version`: Defined to dynamically chose what version of pip (for 2.x and 3.x) to upgrade/downgrade to.
-
-Dependencies
-------------
+## Dependencies
 
 None
 
-Example Playbook
-----------------
+## Example Playbook
 
 For default behaviour of role (i.e. installation of **python3-pip** package) in ansible playbooks.
+
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.pip
+    - darkwizard242.pip
 ```
 
 For customizing behavior of role (i.e. installation of latest **python-pip** package instead of **python3-pip**) in ansible playbooks.
+
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.pip
-      vars:
-        pip_app_package: python-pip
+    - darkwizard242.pip
+  vars:
+    pip_app_package: python-pip
 ```
-             
+
 For customizing behavior of role (i.e. un-installation of **python3-pip** package) in ansible playbooks.
+
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.pip
-      vars:
-        desired_state: absent
-```      
-         
-License
--------
+    - darkwizard242.pip
+  vars:
+    desired_state: absent
+```
+
+## License
 
 [MIT](https://github.com/darkwizard242/ansible-role-pip/blob/master/LICENSE)
 
-Author Information
-------------------
+## Author Information
 
 This role was created by [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/).
