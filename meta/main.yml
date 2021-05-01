@@ -1,6 +1,6 @@
 galaxy_info:
   role_name: pip
-  author: Ali Muhammad
+  author: darkwizard242
   description: Role for dynamically installing or uninstalling 'python3-pip' or 'python-pip' package.
   company: none
   license: MIT
