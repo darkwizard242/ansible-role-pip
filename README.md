@@ -22,11 +22,11 @@ pip_upgrade_version: latest
 
 ### Variables table:
 
-Variable            | Value (default) | Description
-------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------
-pip_app_package     | **python3-pip** | Defined to dynamically provide package name i.e. **python3-pip** or **python-pip**
-pip_desired_state   | present         | Defined to dynamically select whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package.
-pip_upgrade_version | latest          | Defined to dynamically select whether to upgrade pip after installation or not.
+Variable            | Description
+------------------- | ------------------------------------------------------------------------------------------------------------------------------
+pip_app_package     | Defined to dynamically provide package name i.e. **python3-pip** or **python-pip**
+pip_desired_state   | Defined to dynamically select whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package.
+pip_upgrade_version | Defined to dynamically select whether to upgrade pip after installation or not.
 
 ## Dependencies
 
@@ -68,4 +68,4 @@ For customizing behavior of role (i.e. un-installation of **python3-pip** packag
 
 ## Author Information
 
-This role was created by [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/).
+This role was created by [Ali Muhammad](https://www.alimuhammad.dev/).
