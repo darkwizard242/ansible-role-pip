@@ -1,3 +1,4 @@
+---
 galaxy_info:
   role_name: pip
   author: darkwizard242
@@ -9,16 +10,18 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - bionic
+        - jammy
         - focal
+        - bionic
     - name: Debian
       versions:
-        - stretch
+        - bullseye
         - buster
+        - stretch
     - name: EL
       versions:
-        - 7
         - 8
+        - 7
 
   galaxy_tags:
     - pythonpackagemanagement

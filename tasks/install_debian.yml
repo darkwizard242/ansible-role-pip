@@ -2,13 +2,13 @@
 # tasks file for git - Debian
 
 - name: Installing {{ pip_app_package }} on Debian systems
-  package:
+  ansible.builtin.package:
     name: "{{ pip_app_package }}"
     state: "{{ pip_desired_state }}"
     force_apt_get: yes
 
 - name: Upgrade pip version for {{ pip_app_package }} on Debian systems
-  pip:
+  ansible.builtin.pip:
     executable: "{{ 'pip3' if pip_app_package.startswith('python3') else 'pip2' }}"
     name: "{{ pip_app_package.split('-')[1] }}"
     state: "{{ pip_upgrade_version }}"
